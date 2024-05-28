@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Linked</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="group-gridbox.css">
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      </script>
+  </head>
+  <body>
+    <div class="logo" ><h1>LinkedIn Linked</h1></div>
+    <div class="picture-scrollbar">
+      
+      <div class="pictures" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="pic1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="jett.png" 
+          draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div class="pic1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="jett.png"
+          draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div class="pic1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="jett.png"
+          draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div class="pic1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="jett.png"
+          draggable="true" ondragstart="drag(event)" id="drag1">
+        </div>
+        <div class="pic1"><img src="jett.png"
+          draggable="true" ondragstart="drag(event)" id="drag1"></div>
+        <!-- <div class="pic1"><img src="jett.png"></div>
+        <div class="pic1"><img src="jett.png"></div>
+        <div class="pic1"><img src="jett.png"></div>
+        <div class="pic1"><img src="jett.png"></div>
+        <div class="pic1"><img src="jett.png"></div> -->
+      </div>
+    </div>
+
+    <div class="group-gridbox">
+      <div class="groupbox" 
+      ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="groupbox" 
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="groupbox"
+      ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+  </body>
+</html>
